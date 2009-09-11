@@ -7,4 +7,6 @@ no_assigned_issues: "Você não tem tickets atribuídos"
 timer_round_interval: "Intervalo de tempo dos tickets"
 minutes: "minutos"
 error_already_working: "Você já está trabalhando em outro ticket"
+start_working: "Iniciar trabalho"
+stop_working: "Parar trabalho"
 

@@ -6,4 +6,6 @@ your_effort:  Your time effort to issues
 no_assigned_issues:   You have no assigned issues
 timer_round_interval: Timer tick interval
 minutes: minutes
-error_already_working: You are already working in another task
+error_already_working: You are already working in another taskstart_working: "Iniciar trabalho"
+stop_working: "Parar trabalho"
+

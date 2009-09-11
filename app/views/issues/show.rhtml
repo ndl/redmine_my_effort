@@ -1,9 +1,9 @@
 <div class="contextual">
 <%= link_to_if_authorized(l(:button_update), {:controller => 'issues', :action => 'edit', :id => @issue }, :onclick => 'showAndScrollTo("update", "notes"); return false;', :class => 'icon icon-edit', :accesskey => accesskey(:edit)) %>
 <% unless working_on_issue?(User.current, @issue) %>
-<%=   link_to 'Start working' , {:controller => 'user_efforts', :action => 'new', :issue_id => @issue.id}, :class => 'icon icon-time' %>
+<%=   link_to l(:start_working) , {:controller => 'user_efforts', :action => 'new', :issue_id => @issue.id}, :class => 'icon icon-time' %>
 <% else %>
-<%=   link_to 'Stop working' , {:controller => 'user_efforts', :action => 'stop'}, :class => 'icon icon-time' %>
+<%=   link_to l(:stop_working) , {:controller => 'user_efforts', :action => 'stop'}, :class => 'icon icon-time' %>
 <% end %>
 
 
@@ -55,7 +55,7 @@
 <% @issue.custom_field_values.each do |value| -%>
     <td valign="top"><b><%=h value.custom_field.name %>:</b></td><td valign="top"><%= simple_format(h(show_value(value))) %></td>
 <% n = n + 1
-   if (n > 1) 
+   if (n > 1)
         n = 0 %>
         </tr><tr>
  <%end
@@ -68,7 +68,7 @@ end %>
 <div class="contextual">
 <%= link_to_remote_if_authorized(l(:button_quote), { :url => {:action => 'reply', :id => @issue} }, :class => 'icon icon-comment') unless @issue.description.blank? %>
 </div>
-                              
+
 <p><strong><%=l(:field_description)%></strong></p>
 <div class="wiki">
 <%= textilizable @issue, :description, :attachments => @issue.attachments %>
@@ -133,3 +133,4 @@ end %>
     <%= auto_discovery_link_tag(:atom, {:format => 'atom', :key => User.current.rss_key}, :title => "#{@issue.project} - #{@issue.tracker} ##{@issue.id}: #{@issue.subject}") %>
     <%= stylesheet_link_tag 'scm' %>
 <% end %>
+
