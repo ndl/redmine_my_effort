@@ -1,9 +1,9 @@
 <div class="contextual">
 <%= link_to_if_authorized(l(:button_update), {:controller => 'issues', :action => 'edit', :id => @issue }, :onclick => 'showAndScrollTo("update", "notes"); return false;', :class => 'icon icon-edit', :accesskey => accesskey(:edit)) %>
 <% unless working_on_issue?(User.current, @issue) %>
-<%=   link_to l(:start_working) , {:controller => 'user_efforts', :action => 'new', :issue_id => @issue.id}, :class => 'icon icon-time' %>
+<%=   link_to l(:start_working), {:controller => 'user_efforts', :action => 'new', :issue_id => @issue.id}, :class => 'icon icon-time' %>
 <% else %>
-<%=   link_to l(:stop_working) , {:controller => 'user_efforts', :action => 'stop'}, :class => 'icon icon-time' %>
+<%=   link_to l(:stop_working), {:controller => 'user_efforts', :action => 'stop'}, :class => 'icon icon-time' %>
 <% end %>
 
 
