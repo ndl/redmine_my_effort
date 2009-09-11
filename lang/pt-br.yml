@@ -1,4 +1,5 @@
 # Portuguese strings go here
+my_effort_title: "Meu Esforço"
 btn_start: "Iniciar"
 btn_stop: "Parar"
 btn_start_working: "Inicie o trabalho neste ticket"

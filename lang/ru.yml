@@ -1,4 +1,5 @@
 # Russian strings go here
+my_effort_title: "My Effort"
 btn_start:  Пуск
 btn_stop:   Стоп
 btn_start_working:   Начать работу над заданием
@@ -7,3 +8,6 @@ no_assigned_issues:   Для вас не назначено ни одного з
 timer_round_interval: Интервал округления таймера
 minutes: минут
 error_already_working: Вы уже работаете над другим заданием
+start_working: "Start working"
+stop_working: "Stop working"
+
