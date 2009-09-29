@@ -1,4 +1,6 @@
-# Portuguese strings go here
+# Brazilian Portuguese strings
+plugin_name: "Meu esforço plugin"
+plugin_description: "Permite iniciar/parar o contador de tempo gasto por ticket em uma aba separada."
 my_effort_title: "Meu Esforço"
 btn_start: "Iniciar"
 btn_stop: "Parar"

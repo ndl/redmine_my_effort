@@ -1,3 +1,6 @@
+# English strings
+plugin_name: "My Effort plugin"
+plugin_description: "Allows to start/stop timers for time spent on an issue from a separate tab"
 my_effort_title: "My Effort"
 btn_start: "Start"
 btn_stop: "Stop"

@@ -1,9 +1,9 @@
 require 'redmine'
 
 Redmine::Plugin.register :redmine_my_effort do
-  name 'My Effort plugin'
+  name :plugin_name
   author 'Oleg Vivtash'
-  description 'Allows to start/stop timers for time spent on an issue from a separate tab'
+  description :plugin_description
   version '0.1.0'
 
   permission :my_effort, {:user_efforts => [:index, :new, :stop]}, :require => :member
