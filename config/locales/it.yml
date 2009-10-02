@@ -1,0 +1,10 @@
+# Italian strings go here
+it:
+  btn_start:  Inizia
+  btn_stop:   Ferma
+  btn_start_working:   Inizia a lavora su questa segnalazione
+  your_effort:  Il tuo tempo speso sulle segnalazioni
+  no_assigned_issues:   Non hai segnalazioni assegnate a te
+  timer_round_interval: Intervallo minimo di tempo
+  minutes: minuti
+  error_already_working: Stai già lavorando su un'altra segnalazione
