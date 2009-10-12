@@ -1,4 +1,5 @@
 require 'redmine'
+require 'my_effort_issue_hooks'
 
 Redmine::Plugin.register :redmine_my_effort do
   name 'My Effort plugin'
