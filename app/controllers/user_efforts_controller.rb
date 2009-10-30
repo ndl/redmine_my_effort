@@ -38,7 +38,7 @@ unloadable
 
     @allowed_statuses = @issue.new_statuses_allowed_to(User.current)
     @edit_allowed = User.current.allowed_to?(:edit_issues, @project)
-    @priorities = Enumeration::get_values('IPRI')
+    @priorities = IssuePriority.all
     @time_entry = TimeEntry.new
 
     @effort.destroy
