@@ -1,4 +1,3 @@
-# Italian strings go here
 it:
   btn_start:  Inizia
   btn_stop:   Ferma
@@ -8,3 +7,4 @@ it:
   timer_round_interval: Intervallo minimo di tempo
   minutes: minuti
   error_already_working: Stai già lavorando su un'altra segnalazione
+

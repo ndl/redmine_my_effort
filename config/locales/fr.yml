@@ -1,0 +1,13 @@
+fr:
+  my_effort_title: "Mon compteur"
+  btn_start: "Commencer"
+  btn_stop: "Arrêter"
+  btn_start_working: "Tavailler sur cette demande"
+  your_effort: "Mon temps de travail sur mes demande"
+  no_assigned_issues: "Je n'ai aucune demande"
+  timer_round_interval: "Intervalle pour la comptabilisation du temps de travail"
+  minutes: "minutes"
+  error_already_working: "Vous travaillez déjà sur une autre demande"
+  start_working: "Démarrer le compteur"
+  stop_working: "Arrêter le compteur"
+

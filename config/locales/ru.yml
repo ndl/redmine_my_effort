@@ -1,4 +1,3 @@
-# Russian strings go here
 ru:
   btn_start:  Пуск
   btn_stop:   Стоп
@@ -8,3 +7,4 @@ ru:
   timer_round_interval: Интервал округления таймера
   minutes: минут
   error_already_working: Вы уже работаете над другим заданием
+
