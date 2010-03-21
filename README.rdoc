@@ -1,3 +1,13 @@
-= my_effort
+= My Effort Redmine plugin
 
-Description goes here
+== Description
+Allows to start/stop timers for time spent on an issue from a separate tab
+
+== Install
+
+  $ cd redmine/
+  $ ./script/plugin install git://github.com/rduarte/redmine_my_effort.git
+  $ rake db:migrate_plugins RAILS_ENV=production
+
+And restart your Rails server.
+
