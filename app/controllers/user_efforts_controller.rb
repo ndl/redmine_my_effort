@@ -22,11 +22,15 @@ unloadable
   end
 
   def new
-    if UserEffort.find(:first, :conditions => {:user_id => User.current.id}).nil?
+    existing_effort = UserEffort.find(:first, :conditions => {:user_id => User.current.id})
+    if existing_effort.nil?
       new_effort = UserEffort.new({:issue_id => params[:issue_id].to_i})
       new_effort.save
     else
-      flash[:error] = l(:error_already_working)
+      # FIXME: hacky, but calling 'link_for' from controller seems to be even
+      # worse ... How is it supposed to be done cleanly in RoR-way at all???
+      issue_link = "<a href=\"#{url_for :controller => 'issues', :action => 'show', :id => existing_effort.issue_id}\">##{existing_effort.issue_id}</a>"
+      flash[:error] = l(:error_already_working, :issue_link => issue_link)
     end
     redirect_to :back #:action => "index"
   end

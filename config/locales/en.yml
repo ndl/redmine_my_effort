@@ -1,10 +1,16 @@
 # English strings go here
 en:
-  btn_start:  Start
-  btn_stop:   Stop
-  btn_start_working:   Start working on this issue
-  your_effort:  Your time effort to issues
-  no_assigned_issues:   You have no assigned issues
-  timer_round_interval: Timer tick interval
-  minutes: minutes
-  error_already_working: You are already working in another task
+  my_effort_title: "My Efforts"
+  current_effort_title: "Current Effort"
+  btn_start: "Start"
+  btn_stop: "Stop"
+  btn_start_working: "Start working on this issue"
+  started_at: "Started At"
+  your_effort: "Your time effort to issues"
+  no_assigned_issues: "You have no assigned issues"
+  no_active_effort: "You currently do not work on any issue"
+  timer_round_interval: "Timer tick interval"
+  minutes: "minutes"
+  error_already_working: "You are already working on {{issue_link}}"
+  start_working: "Start working"
+  stop_working: "Stop working"

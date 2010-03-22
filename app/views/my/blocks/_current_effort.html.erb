@@ -1,0 +1,26 @@
+<h3><%= l(:current_effort_title) %></h3>
+
+<%
+  existing_effort = UserEffort.find(:first, :conditions => {:user_id => User.current.id})
+  if not existing_effort.nil?
+    issue = Issue.find_by_id(existing_effort.issue_id)
+%>
+    <table class="list time-entries">
+      <thead>
+        <tr>
+          <th><%= l(:label_project) %></th>
+          <th><%= l(:started_at) %></th>
+          <th><%= l(:field_hours) %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="subject"><%=h issue.project %> <%= ' - ' + link_to_issue(issue, :truncate => 50) %></td>
+          <td class="hours"><%= format_time(existing_effort.start_time) %></td>
+          <td class="hours"><em><%= l_hours(existing_effort.hours_spent) %></em></td>
+        </tr>
+      </tbody>
+    </table>
+<% else %>
+    <%= l(:no_active_effort) %>
+<% end %>
