@@ -1,10 +1,16 @@
+# English strings go here
 ru:
-  btn_start:  Пуск
-  btn_stop:   Стоп
-  btn_start_working:   Начать работу над заданием
-  your_effort:  Ваше время, затраченное на задания
-  no_assigned_issues:   Для вас не назначено ни одного задания
-  timer_round_interval: Интервал округления таймера
-  minutes: минут
-  error_already_working: Вы уже работаете над другим заданием
-
+  my_effort_title: "Мое потраченное время"
+  current_effort_title: "Текущее задание"
+  btn_start: "Начать"
+  btn_stop: "Закончить"
+  btn_start_working: "Начать работу над заданием"
+  started_at: "Начато в"
+  your_effort: "Ваше время, потраченное на задания"
+  no_assigned_issues: "На Вас не назначено ни одного задания"
+  no_active_effort: "Вы сейчас не работаете ни над одним заданием"
+  timer_round_interval: "Интервал округления таймера"
+  minutes: "минут"
+  error_already_working: "Вы уже работаете над заданием {{issue_link}}"
+  start_working: "Начать работу"
+  stop_working: "Закончить работу"

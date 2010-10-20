@@ -1,0 +1,16 @@
+# English strings go here
+uk:
+  my_effort_title: "Мій витрачений час"
+  current_effort_title: "Поточне завдання"
+  btn_start: "Почати"
+  btn_stop: "Закінчити"
+  btn_start_working: "Почати роботу над завданням"
+  started_at: "Почато У"
+  your_effort: "Ваш час що витрачено на завдання"
+  no_assigned_issues: "На Вас не назначено жодного завдання"
+  no_active_effort: "Ви зараз не працюєте над жодним завданням"
+  timer_round_interval: "Інтервал заокруглення таймера"
+  minutes: "хвилин"
+  error_already_working: "Ви вже працюєте над завданням {{issue_link}}"
+  start_working: "Почати роботу"
+  stop_working: "Закінчити роботу"

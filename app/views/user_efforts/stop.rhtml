@@ -1,16 +1,17 @@
 <h2><%= l(:label_spent_time) %></h2>
 <% labelled_tabular_form_for :issue, @issue,
-                             :url => {:controller => 'issues', :action => 'edit', :id => @issue},
+                             :url => {:controller => 'issues', :action => 'update', :id => @issue},
                              :html => {:id => 'issue-form',
                                        :class => nil,
+                                       :method => :put,
                                        :multipart => true} do |f| %>
-    <%= error_messages_for 'issue' %>
-    <%= error_messages_for 'time_entry' %>
+    <%= error_messages_for 'issue', 'time_entry' %>
     <div class="box">
     <h3><%= @issue.to_s %></h3>
     <% if @edit_allowed || !@allowed_statuses.empty? %>
         <fieldset class="tabular"><legend><%= l(:label_change_properties) %>
         <% if !@issue.new_record? && !@issue.errors.any? && @edit_allowed %>
+        <small>(<%= link_to l(:label_more), {}, :onclick => 'Effect.toggle("issue_descr_fields", "appear", {duration:0.3}); return false;' %>)</small>
         <% end %>
         </legend>
         <%= render :partial => (@edit_allowed ? 'form' : 'form_update'), :locals => {:f => f} %>
@@ -32,20 +33,20 @@
         <% end %>
     </fieldset>
     <% end %>
-
+    
     <fieldset><legend><%= l(:field_notes) %></legend>
     <%= text_area_tag 'notes', @notes, :cols => 60, :rows => 10, :class => 'wiki-edit' %>
     <%= wikitoolbar_for 'notes' %>
     <%= call_hook(:view_issues_edit_notes_bottom, { :issue => @issue, :notes => @notes, :form => f }) %>
-
+    
     <p><%=l(:label_attachment_plural)%><br /><%= render :partial => 'attachments/form' %></p>
     </fieldset>
     </div>
-
+    
     <%= f.hidden_field :lock_version %>
     <%= submit_tag l(:button_submit) %>
-    <%= link_to_remote l(:label_preview),
-                       { :url => { :controller => 'issues', :action => 'preview', :project_id => @project, :id => @issue },
+    <%= link_to_remote l(:label_preview), 
+                       { :url => preview_issue_path(:project_id => @project, :id => @issue),
                          :method => 'post',
                          :update => 'preview',
                          :with => 'Form.serialize("issue-form")',

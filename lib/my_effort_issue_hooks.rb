@@ -28,7 +28,9 @@ class MyEffortIssueHook < Redmine::Hook::Listener
             time_entry.user = effort.user
             time_entry.issue = issue
             time_entry.project = issue.project if issue.project_id
-            time_entry.activity = Enumeration.find(:first, :conditions => {:opt => "ACTI"})
+            time_entry.activity = Enumeration.find(:first, :conditions => {:type => "TimeEntryActivity", :is_default => 1})
+            time_entry.activity = Enumeration.find(:first, :conditions => {:type => "TimeEntryActivity", :name => "Development"}) unless time_entry.activity
+            time_entry.activity = Enumeration.find(:first, :conditions => {:type => "TimeEntryActivity"}) unless time_entry.activity
             time_entry.spent_on = Time.now.to_date
             time_entry.hours = effort.hours_spent
             time_entry.save
